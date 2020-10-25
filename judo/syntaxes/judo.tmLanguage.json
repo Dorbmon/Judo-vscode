@@ -1,0 +1,32 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Judo",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.judo",
+				"match": "\\b(if|for|return|func|var|else|extern|int64|int32|double)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.judo",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.judo",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.judo"
+}

@@ -1,0 +1,14 @@
+extern builtInTestPrintInt64 (t int64)
+var buf:int64 [1000]
+func fac (t int64) (int64) {
+   if buf [t] != 0 {
+     return buf [t]
+   }
+   buf [t] = fac (t - 1) + fac (t - 2)
+   return buf [t]
+}
+func main () {
+   buf [1] = 1
+   buf [2] = 1
+   builtInTestPrintInt64 (fac (20))
+}

@@ -1,0 +1,30 @@
+{
+    "name": "judo",
+    "displayName": "Judo",
+    "description": "Judo-Language",
+    "version": "0.0.1",
+    "publisher": "Dorbmon",
+    "engines": {
+        "vscode": "^1.50.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Dorbmon/Judo-vscode"
+    },
+    "contributes": {
+        "languages": [{
+            "id": "judo",
+            "aliases": ["Judo", "judo"],
+            "extensions": [".judo"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "judo",
+            "scopeName": "source.judo",
+            "path": "./syntaxes/judo.tmLanguage.json"
+        }]
+    }
+}
